@@ -1,0 +1,1 @@
+pais.educacional.universidade.graduacao.turno.disciplina.ano.semestre.diasemana.aluno.nomeProjeto
