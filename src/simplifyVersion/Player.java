@@ -1,17 +1,14 @@
 package simplifyVersion;
 
-import java.lang.Character;
-
 public class Player {
     private final String playerName;
-    private int life;
+    private int life = 10;
 
     public Player(String playerName) {
         this.playerName = playerName;
-        this.life = 10;
     }
 
-    public int getLife() {
+    public int getLifeSize() {
         return life;
     }
 

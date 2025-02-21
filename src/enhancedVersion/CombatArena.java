@@ -1,4 +1,4 @@
-package simplifyVersion;
+package enhancedVersion;
 
 import java.util.Random;
 
@@ -47,11 +47,12 @@ public class CombatArena {
         }
 
         if(engage && !defended){
-            System.out.println(attacker.getPlayerName() + " attack with a strength of " + attackStrength);
+            System.out.println(attacker.getPlayerName() + " attacks with a strength of " + attackStrength);
             System.out.println(defender.getPlayerName() + " fail to block the attack");
         }
         if (damage > 0) {
             defender.setLife(defender.getLifeSize() - damage);
+            defender.decreaseLifeBarr(damage);
         }
     }
 
@@ -77,8 +78,8 @@ public class CombatArena {
         round++;
         System.out.println("\nRound " + round + " Fight!!!" );
         System.out.println("["
-                + p1.getPlayerName().toUpperCase() + "] (" + p1.getLifeSize() + ") x ["
-                + p2.getPlayerName().toUpperCase() + "] (" + p2.getLifeSize() + ")");
+                + p1.getPlayerName().toUpperCase() + "] " + p1.lifeBarToString() + " x ["
+                + p2.getPlayerName().toUpperCase() + "] " + p2.lifeBarToString() + "");
         playerAttack();
         if(engage){
             playerDefend();
